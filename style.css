@@ -1,0 +1,100 @@
+/* https://css-tricks.com/newsletter/259-how-to-use-variable-fonts/ */
+/* https://www.digitalocean.com/community/tutorials/css-variable-fonts */
+
+@font-face {
+    font-family: "Figtree";
+    src: url(./assets/fonts/Figtree-VariableFont_wght.ttf) format("truetype-variations");
+    font-weight: 600 800;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree';
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(47, 88%, 63%);
+}
+
+.card {
+    padding: 22px 25px;
+    width: 382px;
+    height: 520px;
+    background-color: white;
+    border: 1px solid hsl(0, 0%, 7%);
+    border-radius: 20px;
+    -webkit-box-shadow: 8px 8px 0px 0px hsl(0, 0%, 7%);
+    -moz-box-shadow: 8px 8px 0px 0px hsl(0, 0%, 7%);
+    box-shadow: 8px 8px 0px 0px hsl(0, 0%, 7%);
+    display: grid;
+}
+
+.card-img {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card-category {
+    background-color: hsl(47, 88%, 63%);
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.card-time {
+    font-size: 14px;
+}
+
+.card-header {
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.card-header:hover,
+.card-header:active {
+    color: hsl(47, 88%, 63%);
+}
+
+.card-text {
+    color: hsl(0, 0%, 50%);
+    line-height: 25px;
+}
+
+footer {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    gap: 12px;
+}
+
+.card-footer-img {
+    width: 35px;
+    height: 35px;
+}
+
+.card-footer-name {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+
+@media (max-width: 410px) {
+    .card {
+        width: 325px;
+        height: 500px;
+    }
+
+    .card-img {
+        max-width: 280px;
+    }
+}
